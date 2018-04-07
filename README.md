@@ -1,21 +1,19 @@
 
-# Facial expression recognition using CNN in Tensorflow
+#Facial Emotions Recognization using CNN in Keras
 
 The package uses a convolutional neural network to classify images from files or from video/camera1 stream.
 
-The faces are first detected using opencv, then we extract the face landmarks using dlib, and we input the raw image data with the face landmarks into a 4 layered convolutional neural network.
+The faces are first detected using opencv, then we extract the face landmarks using dlib, and we input the raw image data with the face landmarks into a 3 layered convolutional neural network.
 
 Better to use anaconda environemnt to easily install the dependencies (especially opencv and dlib)
 
 
 # Dependencies
 
-- Tensorflow
-- Tflearn
+- Keras
 - Numpy
-- Argparse
-- [optional] Hyperopt + pymongo + networkx
-- [optional] dlib, imutils, opencv 3
+- OpenCV3
+- dlib, imutils
 
 
 # HOW TO USE?
@@ -94,12 +92,6 @@ python predict-from-video.py
 ```
 
 
-# Link to the dataset with extracted landmarks:
-
-You can find the database link and the scripts to extract the landmark explained in this repository:
-
-https://github.com/amineHorseman/facial-expression-recognition-svm
-
 
 
 # Classification results:
@@ -108,11 +100,6 @@ https://github.com/amineHorseman/facial-expression-recognition-svm
 
 Inline-style: 
 ![alt text](https://github.com/amineHorseman/facial-expression-recognition-using-cnn/Classification_results_5_emotions.png "Test accuracy results")
-
-The comparison with SVM was done using the results from this package:
-
-https://github.com/amineHorseman/facial-expression-recognition-svm
-
 
 #### Classification using 3 emotions
 
