@@ -14,3 +14,9 @@ Better to use anaconda environemnt to easily install the dependencies (especiall
 - Numpy
 - OpenCV3
 - imutils
+
+## Output Results
+
+![newimage2](https://user-images.githubusercontent.com/19153198/38571132-4cc96c8a-3d0d-11e8-8f0f-f0eddd16db3d.jpg)
+
+![newimage3](https://user-images.githubusercontent.com/19153198/38571152-5abd5964-3d0d-11e8-8baa-a46d1e40fc4c.jpg)
