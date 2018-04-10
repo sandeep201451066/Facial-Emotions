@@ -1,11 +1,11 @@
 
-#Facial Emotions Recognization using CNN in Keras
+# Facial Emotions Recognization using CNN in Keras
 
-The package uses a convolutional neural network to classify images from files or from video/camera1 stream.
+The package uses a convolutional neural network to classify images from files or from video/camera stream.
 
-The faces are first detected using opencv, then we extract the face landmarks using dlib, and we input the raw image data with the face landmarks into a 3 layered convolutional neural network.
+The faces are first detected using opencv, croped faces and we input the raw image data with the face landmarks into a 3 layered convolutional neural network.
 
-Better to use anaconda environemnt to easily install the dependencies (especially opencv and dlib)
+Better to use anaconda environemnt to easily install the dependencies (especially opencv )
 
 
 # Dependencies
@@ -13,94 +13,4 @@ Better to use anaconda environemnt to easily install the dependencies (especiall
 - Keras
 - Numpy
 - OpenCV3
-- dlib, imutils
-
-
-# HOW TO USE?
-
-### Train the model
-1. Choose your parameters in 'parameters.py'
-
-2. Launch training:
-
-```
-python train.py --train=yes
-```
-
-3. Train and evaluate:
-
-```
-python train.py --train=yes --evaluate=yes
-```
-
-N.B: make sure the parameter "save_model" (in parameters.py) is set to True if you want to train and evaluate
-
-
-### Optimize training hyperparameters
-1. For this section, you'll need to install first these optional dependencies:
-```
-pip install hyperopt, pymongo, networkx
-```
-
-2. Lunch the hyperparamets search:
-```
-python optimize_hyperparams.py --max_evals=20
-```
-
-3. You should then retrain your model with the best parameters
-
-N.B: the accuracies displayed is for validation_set (not test_set)
-
-### Evaluate model (calculating test accuracy)
-
-1. Modify 'parameters.py':
- 
-Set "save_model_path" parameter to the path of your pretrained file
-
-2. Launch evaluation on test_set:
-
-```
-python train.py --evaluate=yes
-```
-
-### Recognizing facial expressions from an image file
-
-1. For this section you will need to install `dlib` and `opencv 3` dependencies
-
-2. Modify 'parameters.py':
-
-Set "save_model_path" parameter to the path of your pretrained file
-
-3. Predict emotions from a file
-
-```
-python predict.py --image path/to/image.jpg
-```
-
-### Facial Emotions Recognization in real time from images and videos
-
-1. For this section you will need to install `dlib`, `imutils` and `opencv 3` dependencies
-
-2. Modify 'parameters.py':
-
-Set "save_model_path" parameter to the path of your pretrained file
-
-3. Predict emotions from a file
-
-```
-python predict-from-video.py
-```
-
-
-
-
-# Classification results:
-
-#### Classification using 5 emotions
-
-Inline-style: 
-![alt text](https://github.com/amineHorseman/facial-expression-recognition-using-cnn/Classification_results_5_emotions.png "Test accuracy results")
-
-#### Classification using 3 emotions
-
-Quick experiments showed that the classification reached 73% after 10 epochs
+- imutils
