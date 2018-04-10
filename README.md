@@ -9,7 +9,7 @@ Better to use anaconda environemnt to easily install the dependencies (especiall
 
 
 # Dependencies
-
+- Tensorflow
 - Keras
 - Numpy
 - OpenCV3
